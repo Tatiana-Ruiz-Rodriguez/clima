@@ -54,9 +54,8 @@
             <Label Text="{Binding Clima}"
                        ></Label>
 
-            <Image 
-                       HeightRequest="200"
-                       WidthRequest="200"
+            <Image WidthRequest="160" 
+                       HeightRequest="160"
                        Source="{Binding Imagen}"
                        ></Image>
 
