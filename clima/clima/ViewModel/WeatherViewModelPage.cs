@@ -1,14 +1,11 @@
 ﻿namespace clima.ViewModel
 {
-    using GalaSoft.MvvmLight.Command;
     using System;
-    using System.Collections.Generic;
-    using System.Net.Http;
-    using System.Runtime.Serialization;
-    using System.Text;
     using System.Windows.Input;
     using Xamarin.Forms;
-    using Model;
+    using GalaSoft.MvvmLight.Command;
+    using System.Net.Http; 
+    using clima.Model;
 
     class WeatherViewModelPage : NotificableViewModel
     {
@@ -143,7 +140,7 @@
 
         private string ObtenerURL()
         {
-            string serviceURL = $"https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22{ubicacion}%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
+            string serviceURL = $"https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22{ResultTerm}%2C%20ak%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
             return serviceURL;
         }
         #endregion
