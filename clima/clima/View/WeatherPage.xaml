@@ -11,13 +11,15 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <StackLayout BindingContext="{Binding Source={StaticResource climaVM}}">
+        <StackLayout BindingContext="{Binding Source={StaticResource climaVM}}" Padding="14">
 
             <SearchBar Placeholder="Ingrese ciudad"
                        Text="{Binding ResultTerm}"
                        SearchCommand="{Binding BuscarCommand}"
                        ></SearchBar>
 
+            <StackLayout Margin="30">
+                
             <Label Text="Ubicacion" 
                        FontAttributes="Bold"></Label>
 
@@ -59,6 +61,8 @@
                        Source="{Binding Imagen}"
                        ></Image>
 
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 
